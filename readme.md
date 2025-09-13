@@ -32,3 +32,11 @@ The Meal Planner Backend Application is a RESTful API built with Node.js and Exp
    - Create express app
    - Listen on a port for incoming requests
    - Setup a basic route to test the server
+
+4. nodemon setup
+5. MongoDB setup
+   - Create a cluster on MongoDB Atlas
+   - Create a database and collection
+   - Get the connection string
+   - Install mongoose using npm install mongoose
+   - Connect to MongoDB using mongoose in server.js
