@@ -51,3 +51,67 @@ The Meal Planner Backend Application is a RESTful API built with Node.js and Exp
 7. MVC Architecture Setup -- Code Splitting
 
    - Split code from server.js to app.js
+
+const mealplanSchema = new mongoose.Schema({
+date: {
+type: Date
+},
+dietType: {
+type: String,
+enum: ['Vegetarian', 'Balanced', 'Low-Carb', 'High-Protein']
+},
+meals: [{
+mealType: {
+type: String,
+enum: ['Breakfast', 'Lunch', 'Dinner', 'Snack']
+},
+name: String,
+calories: Number,
+protein: Number,
+carbs: Number,
+fat: Number
+}]
+}, { timestamps: true });
+
+Example Create MealPlan
+
+```javascript
+{
+   "date": "2025-10-15",
+   "dietType": "Balanced",
+   "meals": [
+         {
+            "mealType": "Breakfast",
+            "name": "Oatmeal with Fruits",
+            "calories": 350,
+            "protein": 10,
+            "carbs": 60,
+            "fat": 5
+         },
+         {
+            "mealType": "Lunch",
+            "name": "Grilled Chicken Salad",
+            "calories": 450,
+            "protein": 40,
+            "carbs": 20,
+            "fat": 15
+         },
+         {
+            "mealType": "Dinner",
+            "name": "Steamed Fish with Vegetables",
+            "calories": 400,
+            "protein": 35,
+            "carbs": 25,
+            "fat": 10
+         },
+         {
+            "mealType": "Snack",
+            "name": "Greek Yogurt with Honey",
+            "calories": 150,
+            "protein": 15,
+            "carbs": 20,
+            "fat": 0
+         }
+   ]
+}
+```
