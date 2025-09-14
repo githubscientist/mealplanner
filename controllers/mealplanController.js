@@ -10,8 +10,13 @@ const createMealPlan = async (req, res) => {
     }
 }
 
-const getAllMealPlans = (req, res) => {
-    res.json({ message: 'Get All Meal Plans' });
+const getAllMealPlans = async (req, res) => {
+    try {
+        const mealplans = await Mealplan.find().select('-__v');
+        res.status(200).json({ mealplans });
+    } catch (error) {
+        res.status(500).json({ message: 'Fetching meal plans failed...', error: error.message });
+    }
 }
 
 module.exports = {

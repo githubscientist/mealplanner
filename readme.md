@@ -115,3 +115,89 @@ Example Create MealPlan
    ]
 }
 ```
+
+Example 2:
+
+```
+{
+   "date": "2025-10-16",
+   "dietType": "Low-Carb",
+   "meals": [
+         {
+            "mealType": "Breakfast",
+            "name": "Scrambled Eggs with Spinach",
+            "calories": 300,
+            "protein": 20,
+            "carbs": 5,
+            "fat": 20
+         },
+         {
+            "mealType": "Lunch",
+            "name": "Turkey Lettuce Wraps",
+            "calories": 400,
+            "protein": 35,
+            "carbs": 10,
+            "fat": 15
+         },
+         {
+            "mealType": "Dinner",
+            "name": "Beef Stir-Fry with Broccoli",
+            "calories": 500,
+            "protein": 45,
+            "carbs": 15,
+            "fat": 20
+         },
+         {
+            "mealType": "Snack",
+            "name": "Almonds and Cheese",
+            "calories": 200,
+            "protein": 10,
+            "carbs": 5,
+            "fat": 15
+         }
+   ]
+}
+```
+
+Example 3:
+
+```
+{
+   "date": "2025-10-17",
+   "dietType": "High-Protein",
+   "meals": [
+         {
+            "mealType": "Breakfast",
+            "name": "Protein Pancakes",
+            "calories": 400,
+            "protein": 30,
+            "carbs": 40,
+            "fat": 10
+         },
+         {
+         "mealType": "Lunch",
+               "name": "Quinoa and Black Bean Bowl",
+               "calories": 450,
+               "protein": 25,
+               "carbs": 50,
+               "fat": 10
+            },
+            {
+               "mealType": "Dinner",
+               "name": "Grilled Salmon with Asparagus",
+               "calories": 550,
+               "protein": 50,
+               "carbs": 20,
+               "fat": 25
+            },
+            {
+               "mealType": "Snack",
+               "name": "Cottage Cheese with Berries",
+               "calories": 200,
+               "protein": 20,
+               "carbs": 15,
+               "fat": 5
+            }
+      ]
+}
+```
