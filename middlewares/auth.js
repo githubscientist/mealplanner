@@ -2,8 +2,9 @@ const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
 const isAuthenticated = async (req, res, next) => {
-    // get the token from the request header
-    const token = req.headers.authorization && req.headers.authorization.split(' ')[1];
+
+    // get the token from the cookies
+    const token = req.cookies && req.cookies.token;
 
     // if no token, return 401
     if (!token) {

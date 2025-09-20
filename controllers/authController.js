@@ -59,8 +59,11 @@ const loginUser = async (req, res) => {
         // generate a JWT token
         const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
 
+        // set the token in the response header for httpOnly cookie
+        res.cookie('token', token, { httpOnly: true });
+
         // return success response
-        res.status(200).json({ message: 'Login successful', token });
+        res.status(200).json({ message: 'Login successful' });
     } catch (error) {
         res.status(500).json({ message: 'Server error' });
     }
